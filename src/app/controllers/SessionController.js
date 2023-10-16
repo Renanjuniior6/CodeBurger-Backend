@@ -24,9 +24,9 @@ class SessionController {
       where: { email }
     })
 
-    if (!user) userEmailOrPasswordIncorrect()
+    if (!user) return userEmailOrPasswordIncorrect()
 
-    if (!(await user.checkPassword(password))) userEmailOrPasswordIncorrect()
+    if (!(await user.checkPassword(password))) return userEmailOrPasswordIncorrect()
 
     return response.json({
       id: user.id,
