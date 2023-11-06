@@ -2,7 +2,7 @@ import Sequelize from 'sequelize'
 import mongoose from 'mongoose'
 
 import User from '../app/controllers/models/User'
-import configDataBase from '../config/database'
+// import configDataBase from '../config/database'
 import Product from '../app/controllers/models/Product'
 import Category from '../app/controllers/models/Category'
 
@@ -15,7 +15,9 @@ class DataBase {
   }
 
   init () {
-    this.connection = new Sequelize(configDataBase)
+    this.connection = new Sequelize(
+      'postgres://postgres:aDGA2D2BFf2*cEgGfcad6a6aE35a*CaE@roundhouse.proxy.rlwy.net:42769/railway'
+    )
 
     models
       .map((model) => model.init(this.connection))
@@ -25,7 +27,7 @@ class DataBase {
 
   mongo () {
     this.mongoConnection = mongoose.connect(
-      'mongodb://localhost:27017/codeburger',
+      'mongodb://mongo:DeggD6F-HF6G6eB-cdgG-21Df35DH5cf@viaduct.proxy.rlwy.net:41765',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true
