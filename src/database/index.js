@@ -16,7 +16,7 @@ class DataBase {
 
   init () {
     this.connection = new Sequelize(
-      'postgres://postgres:aDGA2D2BFf2*cEgGfcad6a6aE35a*CaE@roundhouse.proxy.rlwy.net:42769/railway'
+      'postgresql://postgres:3dC4DAf*D-1c4*DCCFdAe4fG*gBC1F42@viaduct.proxy.rlwy.net:46666/railway'
     )
 
     models
@@ -27,7 +27,7 @@ class DataBase {
 
   mongo () {
     this.mongoConnection = mongoose.connect(
-      'mongodb://mongo:DeggD6F-HF6G6eB-cdgG-21Df35DH5cf@viaduct.proxy.rlwy.net:41765',
+      'mongodb://mongo:adEbBg-d1BHdDDb2BAFDce1h35AahEF6@monorail.proxy.rlwy.net:21675',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true
