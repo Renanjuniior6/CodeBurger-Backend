@@ -1,83 +1,73 @@
-<h3>Repositório Back end do projeto Code Burger</h3>
+# 🍔 Code Burger | API
 
-Rodando através do Nodejs e Express com auxilio dos bancos relacionais PostgreSQL e não Relacionais MongoDB hospedaos em container no Docker.
-Feito com o modelo MVC contendo controllers de usuários, produtos, categorias e pedidos gerenciando os dados que entram e armazenando nos bancos de dados.
+### API do projeto Codeburger criado na estrutura MVC com integração dos bancos de dados PostgreSQL e MongoDB
 
-No PostgreSQL é armazenado os usuários logados, produtos e categorias, no Mongo são armazenados somente os pedidos. Através das controllers e models eles são armazenados e atualizados
-automaticamente neles. 
+- Rodando através do <b>Node</b> e <b>Express</b> com auxilio dos bancos relacionais <b>PostgreSQL</b> e não relacionais (NoSQL) <b>MongoDB</b> hospedaos em container no <b>Docker</b>.
+Feito com o modelo <b>MVC</b> contendo controllers de usuários, produtos, categorias e pedidos gerenciando os dados que entram e armazenando nos bancos de dados.
 
-<h4>O repositório possui rotas para cada requisição:</h3>
--Rota de fazer pedido
-<br>
--Criar um produto
-<br>
--Criar categoria
-<br>
--Logar o usuário
-<br>
--Cadastrar um usuário
-<br>
--Visualizar produtos
-<br>
--Visualizar categorias
-<br>
--Atualizar produto
-<br>
--Atualizar categoria
-<br>
--Atualizar status do pedido
-<br>
-<br>
+- No <b>PostgreSQL</b> é armazenado os usuários logados, produtos e categorias, no <b>Mongo</b> são armazenados somente os pedidos. Através das controllers e models eles são armazenados e atualizados
+automaticamente neles.
 
-⭕ Foram usados frameworks NoSQL para o a criação dos models e controllers como sequelize e o mongoose
+## 🔧 Funcionalidades 
+- Comunicação com o front end, enviando os dados armazenados
+- Autenticação de usuário com email, senha, admin e token
+- Tratamento de dados
+- Upload de fotos
+- Comunicação com o banco de dados (PostgreSQL, MongoDB)
+- Rotas privadas
+- Rota de criação de usuário
+- Rota de Login
+- Rota de criação da categoria
+- Rota de "get" da categoria
+- Rota de "update" de categoria
+- Rota de "delete" de categoria
+- Rota de criação do pedido
+- Rota de criação de produto
+- Rota de "get" do produto
+- Rota de "update" de produto
+- Rota de "delete" do produto
+- Rota de "get" do produto
+- Rota de "get" do pedido
+- Rota de "update" de status do pedido
+- Rota de "delete" do pedido
 
-🗂 Pastas foram criadas para organizar cada arquivo e funções da aplicação como a pasta de "config", "database"...
+## ✅Tecnologias Utilizadas
+- [X] Javascript
+- [X] Node
+- [X] Express
+- [X] Sequelize
+- [X] Sequelize-cli
+- [X] Mongoose
+- [X] Sucrase
+- [X] PostgreSQL
+- [X] MongoDB
+- [X] Cors
+- [X] Bcrypt
+- [X] JsonWebToken
+- [X] Multer
+- [X] Yup
+- [X] Yarn
+- [X] Eslint
+- [X] Prettier
 
-📊 Em 'app' estão os controllers, models e schemas da aplicação
+## ❗ Observações 
+- 🗂 Foram usados frameworks de ORM's para a criação de uma camada entre a aplicação e o banco de dados. Como o Sequelize e o Mongoose
+- 🗂 Em "app" estão os controllers, models e schemas da aplicação
+- 🗂 Pastas foram criadas para organizar cada arquivo e funções da aplicação como a pasta de "config", "database"...
+- 🗂 Em "middlewares" está o arquivo de interceptor das rotas com a verificação do JWT
+- 🗂 Em "database" estão as migrations e conexão dos models com os bancos
+- 🗂 Em "uploads" estão os uploads das fotos da aplicação feito através do multer
 
-📊 Em 'middlewares' está o arquivo de interceptor das rotas com a verificação do JWT
+## 💻 Como rodar
+```bash
+# Clone este respositório
+$ git clone [URL]
 
-📊 Em 'config' estão o arquivos de configuração do multer, banco de dados e autenticação do JWT
+# Instale as dependências
+$ yarn install
 
-📊 Em 'database' estão as migrations e conexão dos models com os bancos
+# Execute a aplicação
+$ yarn dev
 
-📊 Em 'uploads' estão os uploads das fotos da aplicação feito através do multer
-
-<h3>💻 Neste projeto foram utilizadas as seguintes ferramentas:</h3>
-<b>-JavaScript</b>
-<br>
-<b>-Node.js</b>
-<br>
-<b>-PostegreSQL</b>
-<br>
-<b>-MongoDB</b>
-<br>
-<b>-Sequelize-cli</b>
-<br>
-<b>-Sucrase</b>
-<br>
-<b>-Bcrypt</b>
-<br>
-<b>-Cors</b>
-<br>
-<b>-Express</b>
-<br>
-<b>-JsonWebToken</b>
-<br>
-<b>-Mongoose</b>
-<br>
-<b>-Multer</b>
-<br>
-<b>-Sequelize</b>
-<br>
-<b>-Yup</b>
-<br>
-<b>-Eslint</b>
-<br>
-<b>-Prettier</b>
-<br>
-<br>
-<b>⭕ Para rodar em outras máquinas é necessário rodar o comando 'Yarn dev' e ter o Yarn instalado na máquina</b>
-
-
- 
+# A aplicação será iniciada na porta 3001, acesse a rota base pelo navegador: http://localhost:3001
+``` 
