@@ -1,6 +1,6 @@
 import { v4 } from 'uuid'
 
-import User from '../controllers/models/User'
+import User from '../models/User'
 
 import * as Yup from 'yup'
 

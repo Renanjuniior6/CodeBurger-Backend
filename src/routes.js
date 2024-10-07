@@ -6,6 +6,7 @@ import UserController from './app/controllers/UserController'
 import SessionController from './app/controllers/SessionController'
 import ProductController from './app/controllers/ProductController'
 import CategoryController from './app/controllers/CategoryController'
+import CreatePaymentIntentController from './app/controllers/stripe/CreatePaymentIntentController'
 
 import authMiddlewares from './app/controllers/middlewares/auth'
 import OrderController from './app/controllers/OrderController'
@@ -35,5 +36,7 @@ routes.put('/categories/:id', upload.single('file'), CategoryController.update)
 routes.post('/orders', OrderController.store)
 routes.put('/orders/:id', OrderController.update)
 routes.get('/orders', OrderController.index)
+
+routes.post('/create-payment-intent', CreatePaymentIntentController.store)
 
 export default routes
