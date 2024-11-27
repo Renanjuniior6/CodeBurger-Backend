@@ -8,7 +8,7 @@ import ProductController from './app/controllers/ProductController'
 import CategoryController from './app/controllers/CategoryController'
 import CreatePaymentIntentController from './app/controllers/stripe/CreatePaymentIntentController'
 
-import authMiddlewares from './app/controllers/middlewares/auth'
+import authMiddlewares from './app/middlewares/auth'
 import OrderController from './app/controllers/OrderController'
 
 const upload = multer(multerConfig)

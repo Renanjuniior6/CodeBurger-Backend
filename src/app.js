@@ -5,16 +5,16 @@ import cors from 'cors'
 
 import './database'
 
-// const corsOption = {
-//   // origin: 'https://codeburger-interface-xi.vercel.app',
-//   origin: 'http://localhost:3000',
-//   credentials: true
-// }
+const corsOption = {
+  // origin: 'https://codeburger-interface-xi.vercel.app',
+  origin: 'http://localhost:3000',
+  credentials: true
+}
 
 class App {
   constructor () {
     this.app = express()
-    this.app.use(cors())
+    this.app.use(cors(corsOption))
 
     this.middlewares()
     this.routes()
